@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.techishdevelopment.loveaholic">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LoveCalculator">
+        <service
+            android:name="com.techishdevelopment.loveaholic.GettingDeviceToken"
+           >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.techishdevelopment.loveaholic.Messaging"
+            >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.techishdevelopment.loveaholic.Option"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techishdevelopment.loveaholic.ResultPhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techishdevelopment.loveaholic.Photo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techishdevelopment.loveaholic.Result"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techishdevelopment.loveaholic.Calculate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techishdevelopment.loveaholic.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techishdevelopment.loveaholic.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
+    </application>
+
+</manifest>

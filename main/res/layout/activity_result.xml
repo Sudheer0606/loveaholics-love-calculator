@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_bg"
+    tools:context=".Result">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/resultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_layout"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCouples"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:fontFamily="@font/andada"
+                android:textColor="#fff"
+                android:textSize="37sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/youName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/berkshire_swash"
+
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvPercent"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:background="@drawable/heart_logo_1" />
+
+            <TextView
+                android:id="@+id/prtnrName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/berkshire_swash"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:layout_marginEnd="15dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/sharebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/button_bg"
+                android:fontFamily="monospace"
+                android:onClick="clickShare"
+                android:text="@string/share"
+
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="#A8272323"
+
+                app:backgroundTintMode="screen"
+                app:iconTintMode="screen"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/retrybtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:fontFamily="monospace"
+                android:onClick="clickRetry"
+                android:layout_marginLeft="30dp"
+                android:text="@string/retry_btn"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="#A8272323"
+                app:backgroundTintMode="screen"
+                app:iconTintMode="screen"
+                android:layout_marginStart="30dp"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ads">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

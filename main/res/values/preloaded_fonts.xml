@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/adamina</item>
+        <item>@font/alike</item>
+        <item>@font/almendra_bold</item>
+        <item>@font/andada</item>
+        <item>@font/berkshire_swash</item>
+        <item>@font/martel_bold</item>
+        <item>@font/quicksand_bold</item>
+    </array>
+</resources>

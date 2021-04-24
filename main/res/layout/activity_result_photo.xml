@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_bg"
+    tools:context=".ResultPhoto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/resultPhotoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_layout"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:id="@+id/youNameImg"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/berkshire_swash"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/setYourImage"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="127dp"
+                    android:layout_height="127dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/photo_bg"
+                    android:padding="5dp"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPercentImg"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/heart_logo_1"
+                android:gravity="center"
+                android:alpha="2"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+
+                <TextView
+                    android:id="@+id/youPNameImg"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/berkshire_swash"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/setPartnerImage"
+                    android:layout_width="127dp"
+                    android:layout_height="127dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/photo_bg"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="ContentDescription,OnClick" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvCouplesImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/andada"
+            android:textColor="#fff"
+            android:textSize="37sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+
+                android:id="@+id/sharebtnImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/button_bg"
+                android:fontFamily="monospace"
+                android:onClick="clickSharePhoto"
+                android:text="@string/share"
+
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="#A8272323"
+                app:backgroundTintMode="screen"
+                app:iconTintMode="screen"
+                tools:ignore="ButtonStyle,OnClick" />
+
+            <Button
+                android:id="@+id/retrybtnImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="monospace"
+                android:onClick="clickRetryPhoto"
+                android:text="@string/retry_btn"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:backgroundTint="#A8272323"
+                app:backgroundTintMode="screen"
+                app:iconTintMode="screen"
+                tools:ignore="ButtonStyle,OnClick"
+                android:layout_marginStart="30dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewResultPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ads">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

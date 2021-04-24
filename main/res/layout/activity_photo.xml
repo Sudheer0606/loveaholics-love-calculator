@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_bg"
+    tools:context=".Photo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_layout"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/yourImage"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/photo_bg"
+                    android:src="@drawable/ic_baseline_add_photo_alternate_24"
+                    android:onClick="uploadYour"
+                    tools:ignore="ContentDescription" />
+
+                <EditText
+                    android:id="@+id/etYouImg"
+                    android:layout_width="135dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/photo_input"
+                    android:fontFamily="@font/martel_bold"
+                    android:gravity="center"
+                    android:hint="@string/you_name"
+                    android:textColor="#fff"
+                    android:textColorHint="#97FAEFEF"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:layout_gravity="center"
+                android:background="@drawable/heart_logo_1"
+                tools:ignore="ContentDescription" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+
+
+                <ImageView
+                    android:id="@+id/yourPartnerImage"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_add_photo_alternate_24"
+                    android:onClick="uploadPartnerImg"
+                    android:background="@drawable/photo_bg"
+                    tools:ignore="ContentDescription,OnClick" />
+
+                <EditText
+                    android:id="@+id/etPImg"
+                    android:layout_width="135dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/photo_input"
+                    android:fontFamily="@font/martel_bold"
+                    android:gravity="center"
+                    android:hint="@string/you_partner_name"
+                    android:textColor="#fff"
+                    android:textColorHint="#97FAEFEF"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/setImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_bg"
+            android:fontFamily="monospace"
+            android:text="@string/btn_result"
+            android:textSize="22sp"
+            app:backgroundTint="#A8272323"
+            app:backgroundTintMode="screen" />
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ads">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

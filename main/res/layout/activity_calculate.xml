@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/layout_bg"
+    android:foregroundGravity="center"
+    tools:context=".Calculate">
+
+    <TextView
+        android:id="@+id/textViewYou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="@string/you_name"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextYou"
+        app:layout_constraintEnd_toEndOf="@+id/editTextYou"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/editTextYou"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextYou"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:fontFamily="@font/martel_bold"
+        android:textColor="@color/white"
+        android:background="@drawable/inputbg"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYou"
+        app:layout_constraintVertical_bias="0.363"
+        tools:ignore="LabelFor,MissingConstraints"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:text="@string/you_partner_name"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPartner"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPartner"
+        app:layout_constraintStart_toStartOf="@+id/editTextPartner"
+        app:layout_constraintTop_toBottomOf="@+id/editTextYou"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextPartner"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/martel_bold"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/inputbg"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalculate"
+        app:layout_constraintStart_toStartOf="@+id/btnCalculate"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="monospace"
+        android:gravity="center_horizontal"
+        android:onClick="calculate"
+        android:text="@string/btn_result"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="#A8272323"
+        app:backgroundTintMode="screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPartner"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="45dp"
+        app:adSize="BANNER"
+        app:adUnitId="@string/banner_ads"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
